@@ -26,12 +26,15 @@ Este repositório contém testes automatizados para aplicações web, utilizando
 
 ```Case-Code_Group/
 │-- src/
-│   ├── /test/java/...core  # coração do projeto, navegação, e métodos de apoio
-│   ├── /test/java/...pages # Object Page da página inicial da Amazon
-│   ├── /test/java/...runner # Executor do projeto
-│   ├── /test/java/...steps # Steps das .features
-│   ├── /test/java/...utilities # Itens utilitários, printscreen, documentação e afins
-│-- features/       # Arquivos Gherkin
+│   ├── /test/java/..core  # coração do projeto, navegação, e métodos de apoio
+│   ├── /test/java/..pages # Object Page da página inicial da Amazon
+│   ├── /test/java/..runner # Executor do projeto
+│   ├── /test/java/..steps # Steps das .features
+│   ├── /test/java/..utilities # Itens utilitários, printscreen, documentação e afins
+│-- features/..Desempenho_PaginaInicial.feature        # 3 cenários com intuito no desempenho, abrindo com Chrome(passed), com Firefox(passed) e "forçando" um carregamento demorado (fail)
+│-- features/..Pesquisa_Produto.feature                # 3 cenários com intuito na barra de pesquisa, Chrome como padrão.
+│-- features/..Responsividade_MenuInicial.feature      # 3 cenários com intuito na reponsividade da tela, Chrome como padrão.
+│-- ├── /..       # Arquivos .feature
 │-- pom.xml         # Configuração do Maven
 │-- README.md       # Descritivo do Projeto
 │-- target/cucumber-reports.html  # Relatório dos testes finalizados com printscreen da página final
