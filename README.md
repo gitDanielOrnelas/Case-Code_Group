@@ -19,6 +19,8 @@ Este repositório contém testes automatizados para aplicações web, utilizando
 1. Instale o **JDK 20.0.2** e configure a variável de ambiente `JAVA_HOME`.
 2. Baixe e adicione o **Chromedriver** (v134) e **Geckodriver** (v0.36.0) ao `PATH`.
 3. Certifique-se de que a versão do **Cucumber-JVM** está corretamente instalada.
+4. Basta executar o "RunCucumberTest.java"
+5. Fique atento ao possível captcha da Amazon, para contornar clique ou digite o captcha (coloquei uma pausa de 10s).
 
 ---
 📌 **Dúvidas ou sugestões?** Sinta-se à vontade para contribuir ou abrir uma issue! 🚀
