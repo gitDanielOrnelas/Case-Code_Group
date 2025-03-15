@@ -22,9 +22,9 @@ Este repositório contém testes automatizados para aplicações web, utilizando
 4. Basta executar o "RunCucumberTest.java"
 5. Fique atento ao possível captcha da Amazon, para contornar clique ou digite o captcha (coloquei uma pausa de 10s).
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
-Case-Code_Group/
+```Case-Code_Group/
 │-- src/
 │   ├── /test/java/  # Testes automatizados
 │-- features/       # Arquivos Gherkin
@@ -32,6 +32,7 @@ Case-Code_Group/
 │-- README.md       # Descritivo do Projeto
 │-- target/cucumber-reports.html  # Relatório dos testes finalizados com printscreen da página final
 │-- target/cucumber-reports/screenshots/*.png  # Screenshots das telas
+```
 
 🛠 Tecnologias Utilizadas
 
