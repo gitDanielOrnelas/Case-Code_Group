@@ -1,0 +1,12 @@
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\core\BasePage.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\core\BaseTest.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\core\DriverFactory.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\core\DSL.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\core\Properties.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\pages\MenuPage.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\runner\RunCucumberTest.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\steps\CommonSteps.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\steps\DesempenhoSteps.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\steps\PesquisaProdutoSteps.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\steps\ResponsividadeMenuInicialSteps.java
+C:\Users\User\eclipse-workspace\Case-CodeGroup-Amazon\src\test\java\br\ornelas\utilities\Hooks.java

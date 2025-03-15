@@ -1,0 +1,10 @@
+br\ornelas\core\DriverFactory$1.class
+br\ornelas\core\DriverFactory.class
+br\ornelas\core\DSL.class
+br\ornelas\core\BasePage.class
+br\ornelas\core\Properties$Browsers.class
+br\ornelas\core\BaseTest.class
+br\ornelas\runner\RunCucumberTest.class
+br\ornelas\core\Properties.class
+br\ornelas\pages\MenuPage.class
+br\ornelas\steps\CommonSteps.class
