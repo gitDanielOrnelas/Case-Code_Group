@@ -24,23 +24,25 @@ public class MenuPage extends DSL {
 
 	// Método para digitar no campo de pesquisa
 	public void digitarPesquisa(String pesquisa) {
-		WebElement campoPesquisa = getDriver().findElement(By.id("twotabsearchtextbox"));
-		campoPesquisa.sendKeys(pesquisa);
+	    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+	    // Espera até que o elemento seja clicável
+	    WebElement campoPesquisa = wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox")));
+
+	    campoPesquisa.sendKeys(pesquisa);
 	}
 
 	// Método para apenas 1 item da lista com "aria-label"
 	public String salvarSugestoesTexto() {
 		try {
-			// Espera de 3 segundos
 			Thread.sleep(3000);
-			// Localiza o primeiro elemento que corresponde ao critério
+			
 			WebElement sugestaoElemento = getDriver().findElement(By.xpath(
 					"//div[contains(@class, 's-suggestion') and contains(@class, 's-suggestion-ellipsis-direction')]")); // funcionando
 
 			// Captura o valor do atributo "aria-label"
 			String ariaLabel = sugestaoElemento.getAttribute("aria-label");
 
-			return ariaLabel; // Retorna o valor do aria-label
+			return ariaLabel;
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 			return null;
@@ -135,12 +137,15 @@ public class MenuPage extends DSL {
 		}
 	}
 
+	// Método para verificar se o menu está visível
 	public boolean verificarMenuVisivel(String menu) {
 		try {
-			WebElement elemento = getDriver().findElement(By.linkText(menu));
+			WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+			WebElement elemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(menu)));
+
 			return elemento.isDisplayed();
 		} catch (NoSuchElementException e) {
-			return false;
+			return false; // Caso o elemento não seja encontrado
 		}
 	}
 
