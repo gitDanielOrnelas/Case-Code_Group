@@ -12,7 +12,7 @@ Aqui estão as versões das principais ferramentas utilizadas no projeto:
 | **Cucumber-JVM**        | 7.6.0    |
 
 ## 📜 Sobre o Projeto
-Este repositório contém testes automatizados para aplicações web, utilizando **Selenium WebDriver**, **JUnit**, **Cucumber**, entre outras ferramentas.
+Este repositório contém testes automatizados para aplicações web, utilizando **Selenium WebDriver**, **JUnit**, **Cucumber**, com **Page Objects** entre outras ferramentas.
 
 ## 🛠️ Configuração do Ambiente
 
@@ -20,7 +20,7 @@ Este repositório contém testes automatizados para aplicações web, utilizando
 2. Baixe e adicione o **Chromedriver** (v134) e **Geckodriver** (v0.36.0) ao `PATH`.
 3. Certifique-se de que a versão do **Cucumber-JVM** está corretamente instalada.
 4. Basta executar o "RunCucumberTest.java"
-5. Fique atento ao possível captcha da Amazon, para contornar clique ou digite o captcha (tive que colocar uma pausa de 10s).
+5. CAPTCHA: Fique atento ao possível captcha da Amazon, coloquei um contorno na aplicação, onde descobri que clicando no link "Tentar uma imagem diferente", ele avança pra tela inicial. Não sei dizer se foi proposital da Amazon para aplicações automáticas, ou é se um BUG.
 
 ## 📂 Estrutura do Projeto
 
