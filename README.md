@@ -23,4 +23,4 @@ Este repositório contém testes automatizados para aplicações web, utilizando
 5. Fique atento ao possível captcha da Amazon, para contornar clique ou digite o captcha (coloquei uma pausa de 10s).
 
 ---
-📌 **Dúvidas ou sugestões?** Sinta-se à vontade para contribuir ou abrir uma issue! 🚀
+📌 **Dúvidas ou sugestões?** Sinta-se à vontade para perguntar! 🚀
