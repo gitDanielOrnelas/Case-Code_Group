@@ -20,13 +20,17 @@ Este repositório contém testes automatizados para aplicações web, utilizando
 2. Baixe e adicione o **Chromedriver** (v134) e **Geckodriver** (v0.36.0) ao `PATH`.
 3. Certifique-se de que a versão do **Cucumber-JVM** está corretamente instalada.
 4. Basta executar o "RunCucumberTest.java"
-5. Fique atento ao possível captcha da Amazon, para contornar clique ou digite o captcha (coloquei uma pausa de 10s).
+5. Fique atento ao possível captcha da Amazon, para contornar clique ou digite o captcha (tive que colocar uma pausa de 10s).
 
 ## 📂 Estrutura do Projeto
 
 ```Case-Code_Group/
 │-- src/
-│   ├── /test/java/  # Testes automatizados
+│   ├── /test/java/...core  # coração do projeto, navegação, e métodos de apoio
+│   ├── /test/java/...pages # Object Page da página inicial da Amazon
+│   ├── /test/java/...runner # Executor do projeto
+│   ├── /test/java/...steps # Steps das .features
+│   ├── /test/java/...utilities # Itens utilitários, printscreen, documentação e afins
 │-- features/       # Arquivos Gherkin
 │-- pom.xml         # Configuração do Maven
 │-- README.md       # Descritivo do Projeto
@@ -34,7 +38,4 @@ Este repositório contém testes automatizados para aplicações web, utilizando
 │-- target/cucumber-reports/screenshots/*.png  # Screenshots das telas
 ```
 
-🛠 Tecnologias Utilizadas
-
----
 📌 **Dúvidas ou sugestões?** Sinta-se à vontade para perguntar! 🚀
