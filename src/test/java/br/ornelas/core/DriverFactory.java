@@ -3,9 +3,7 @@ package br.ornelas.core;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
 
@@ -15,7 +13,7 @@ public class DriverFactory {
 	public DriverFactory() {
 	}
 
-	// Método para definir o navegador antes de obter o driver
+	// definir o navegador antes de obter o driver
 	public static void setBrowser(String navegador) {
 		navegadorAtual = navegador.toUpperCase();
 	}
@@ -28,21 +26,19 @@ public class DriverFactory {
 				System.setProperty("webdriver.gecko.driver",
 						"C:\\Users\\User\\OneDrive\\Documentos\\Automação\\firefox\\geckodriver.exe");
 
-				// Configuração para o Firefox
-				FirefoxOptions firefoxOptions = new FirefoxOptions();
-				//firefoxOptions.addArguments("--headless"); // Executar em modo headless (sem abrir o navegador)
+				// FirefoxOptions firefoxOptions = new FirefoxOptions();
+				// firefoxOptions.addArguments("--headless"); // Executar em modo headless (sem abrir o navegador)
 
-				driver = new FirefoxDriver(firefoxOptions);
+				driver = new FirefoxDriver();
 				break;
 			case "CHROME":
 				System.setProperty("webdriver.chrome.driver",
 						"C:\\Users\\User\\OneDrive\\Documentos\\Automação\\chromedriver-win64 - v134\\chromedriver.exe");
 
-				// Configuração para o Chrome
-				ChromeOptions chromeOptions = new ChromeOptions();
-				//chromeOptions.addArguments("--headless");  // Executar em modo headless (sem abrir o navegador)
+				// ChromeOptions chromeOptions = new ChromeOptions();
+				// chromeOptions.addArguments("--headless"); // Executar em modo headless (sem abrir o navegador)
 
-				driver = new ChromeDriver(chromeOptions);
+				driver = new ChromeDriver();
 				break;
 
 			}

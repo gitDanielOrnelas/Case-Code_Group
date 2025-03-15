@@ -10,6 +10,8 @@ import java.util.NoSuchElementException;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,23 +21,46 @@ import br.ornelas.core.DSL;
 public class MenuPage extends DSL {
 
 	public void acessarTelaInicial() {
-		getDriver().get("https://www.amazon.com.br/");
+		WebDriver driver = getDriver();
+		driver.get("https://www.amazon.com.br/");
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		// CAPTCHA: Fique atento ao possível captcha da Amazon, coloquei um contorno na
+		// aplicação,
+		// onde descobri que clicando no link "Tentar uma imagem diferente", ele avança
+		// pra tela inicial.
+		// Não sei dizer se foi proposital da Amazon para aplicações automáticas, ou é
+		// se um BUG.
+		try {
+			// Verifica se o link "Tentar uma imagem diferente" está presente
+			WebElement linkCaptcha = wait.until(ExpectedConditions
+					.presenceOfElementLocated(By.xpath("//a[contains(text(), 'Tentar uma imagem diferente')]")));
+
+			// Se o link do captcha for encontrado, ele clica no link para passar
+			if (linkCaptcha.isDisplayed()) {
+				linkCaptcha.click();
+				// driver.navigate().refresh();
+			}
+		} catch (TimeoutException e) {
+			// Se o captcha não apareceu, segue normalmente
+			System.out.println("Captcha não detectado, seguindo para a página inicial.");
+		}
 	}
 
 	// Método para digitar no campo de pesquisa
 	public void digitarPesquisa(String pesquisa) {
-	    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
-	    // Espera até que o elemento seja clicável
-	    WebElement campoPesquisa = wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox")));
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+		// Espera até que o elemento seja clicável
+		WebElement campoPesquisa = wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox")));
 
-	    campoPesquisa.sendKeys(pesquisa);
+		campoPesquisa.sendKeys(pesquisa);
 	}
 
 	// Método para apenas 1 item da lista com "aria-label"
 	public String salvarSugestoesTexto() {
 		try {
 			Thread.sleep(3000);
-			
+
 			WebElement sugestaoElemento = getDriver().findElement(By.xpath(
 					"//div[contains(@class, 's-suggestion') and contains(@class, 's-suggestion-ellipsis-direction')]")); // funcionando
 

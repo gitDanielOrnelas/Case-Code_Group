@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 		//features = "src/test/resources/features/Desempenho_PaginaInicial.feature",
 		features = "src/test/resources/features/",
 		glue = {"br.ornelas.steps","br.ornelas.utilities"},
-		//tags = "@TC012",
+		//tags = "@TC011",
 		plugin = {
 				"pretty",
 				"html:target/cucumber-reports.html", "json:target/cucumber.json" 				

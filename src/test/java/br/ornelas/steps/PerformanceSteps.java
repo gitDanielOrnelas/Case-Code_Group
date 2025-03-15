@@ -10,13 +10,12 @@ public class PerformanceSteps {
 
 	private long startTime;
 	private long endTime;
-	private CommonSteps commonSteps = new CommonSteps();
 	MenuPage menuPage = new MenuPage();
 
 	@Given("que o usuário acessa a página inicial com o navegador {string}")
-	public void que_o_usuário_acessa_a_página_inicial_com_o_navegador(String navegador) throws InterruptedException {
-		DriverFactory.setBrowser(navegador);
-		commonSteps.que_o_usuário_acessa_a_página_inicial();
+	public void que_o_usuário_acessa_a_página_inicial_com_o_navegador(String tipoNavegador) throws InterruptedException {
+		DriverFactory.setBrowser(tipoNavegador);
+		menuPage.acessarTelaInicial();
 		startTime = System.currentTimeMillis();
 	}
 
