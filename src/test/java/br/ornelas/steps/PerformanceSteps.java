@@ -21,6 +21,7 @@ public class PerformanceSteps {
 
 	@When("a página é carregada completamente")
 	public void a_página_é_carregada_completamente() {
+		menuPage.verificarMenuVisivel("Venda na Amazon");
 		endTime = System.currentTimeMillis();
 	}
 
@@ -31,7 +32,6 @@ public class PerformanceSteps {
 
 	@Then("devemos validar que o carregamento não poderá ser maior que {int} segundos")
 	public void devemos_validar_que_o_carregamento_não_poderá_ser_maior_que_segundos(int tempo) {
-		MenuPage menuPage = new MenuPage();
 		menuPage.validarTempoMaximoDeCarregamento(startTime, endTime, tempo);
 	}
 

@@ -14,7 +14,6 @@ public class CommonSteps {
 	@Given("que o usuário acessa a página inicial")
 	public void que_o_usuário_acessa_a_página_inicial() throws InterruptedException {
 		menuPage.acessarTelaInicial();
-		// Thread.sleep(2000); captcha
 	}
 
 	@When("digitar {string} no campo de pesquisa")
