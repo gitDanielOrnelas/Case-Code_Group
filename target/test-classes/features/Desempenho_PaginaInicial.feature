@@ -22,9 +22,9 @@ Feature: Validar tempo de carregamento da página inicial da Amazon
 	## Fim 2
 	
 # O usuário acesse a página inicial da amazon com tempo superir a 5s
-	@TC012
-  Scenario: Tempo de carregamento alto
-    Given que o usuário acessa a página inicial
-    When a página é carregada completamente
-    Then devemos validar que o carregamento não poderá ser maior que 5 segundos
+#	@TC012
+  #Scenario: Tempo de carregamento alto
+    #Given que o usuário acessa a página inicial
+    #When a página é carregada completamente
+    #Then devemos validar que o carregamento não poderá ser maior que 0 segundos
 	## Fim 3

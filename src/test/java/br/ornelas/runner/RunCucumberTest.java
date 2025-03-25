@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome = true,
 		//features = "src/test/resources/features/Pesquisa_Produto.feature",
 		//features = "src/test/resources/features/Responsividade_MenuInicial.feature",
-		features = "src/test/resources/features/Desempenho_PaginaInicial.feature",
-		//features = "src/test/resources/features/",
+		//features = "src/test/resources/features/Desempenho_PaginaInicial.feature",
+		features = "src/test/resources/features/",
 		glue = {"br.ornelas.steps","br.ornelas.utilities"},
 		//tags = "@TC012",
 		plugin = {

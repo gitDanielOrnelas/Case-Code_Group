@@ -3,7 +3,9 @@ package br.ornelas.core;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
 
@@ -26,19 +28,19 @@ public class DriverFactory {
 				System.setProperty("webdriver.gecko.driver",
 						"C:\\Users\\User\\OneDrive\\Documentos\\Automação\\firefox\\geckodriver.exe");
 
-				// FirefoxOptions firefoxOptions = new FirefoxOptions();
-				// firefoxOptions.addArguments("--headless"); // Executar em modo headless (sem abrir o navegador)
+				 FirefoxOptions firefoxOptions = new FirefoxOptions();
+				 //firefoxOptions.addArguments("--headless"); // Executar em modo headless (sem abrir o navegador)
 
-				driver = new FirefoxDriver();
+				driver = new FirefoxDriver(firefoxOptions);
 				break;
 			case "CHROME":
 				System.setProperty("webdriver.chrome.driver",
 						"C:\\Users\\User\\OneDrive\\Documentos\\Automação\\chromedriver-win64 - v134\\chromedriver.exe");
 
-				// ChromeOptions chromeOptions = new ChromeOptions();
-				// chromeOptions.addArguments("--headless"); // Executar em modo headless (sem abrir o navegador)
+				 ChromeOptions chromeOptions = new ChromeOptions();
+				 //chromeOptions.addArguments("--headless"); // Executar em modo headless (sem abrir o navegador)
 
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(chromeOptions);
 				break;
 
 			}
